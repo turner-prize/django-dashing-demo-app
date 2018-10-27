@@ -7,11 +7,11 @@ dashboard.addWidget('clock_widget', 'Clock');
 dashboard.addWidget('new_users_widget', 'Number', {
     getData: function () {
         var self = this;
-        Dashing.utils.get('new_users_widget', function(scope) {
+        $.get('widgets/new_users_widget/', function(scope) {
             $.extend(self.scope, scope);
         });
     },
-    interval: 5000
+    interval: 2000
 });
 
 dashboard.addWidget('buzzwords_widget', 'List', {
@@ -24,10 +24,6 @@ dashboard.addWidget('buzzwords_widget', 'List', {
                    {label: 'Web 2.0', value: 12},
                    {label: 'Turn-key', value: 2},
                    {label: 'Enterprise', value: 12},
-                   {label: 'Pivoting', value: 3},
-                   {label: 'Leverage', value: 10},
-                   {label: 'Streamlininess', value: 4},
-                   {label: 'Paradigm shift', value: 6},
                    {label: 'Synergy', value: 7}]
             });
     }

@@ -15,8 +15,8 @@ class NewClientsWidget(NumberWidget):
 
     def get_detail(self):
         global users
-        return '{} actives'.format(users/3)
+        return '{} actives'.format(int(users/3))
 
     def get_more_info(self):
         global users
-        return '{} fakes'.format(users/10)
+        return '{} fakes'.format(int(users/10))

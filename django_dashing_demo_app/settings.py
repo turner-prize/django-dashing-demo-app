@@ -47,7 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashing',
+    'django-dashing.dashing',
     'django_dashing_demo_app',
 )
 
